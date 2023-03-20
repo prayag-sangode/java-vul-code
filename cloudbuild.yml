@@ -3,7 +3,8 @@ steps:
 #Execute SAST Scan using SonarCloud in GCP DevSecOps Pipeline
   - name: maven:3-jdk-11
     entrypoint: mvn
-    args: ['verify', 'sonar:sonar','-Dsonar.host.url=https://sonarcloud.io','-Dsonar.organization=gcpdevsecops','-Dsonar.projectKey=gcpdevsecopskey','-Dsonar.login=${_SONAR_TOKEN}']
+    #args: ['verify', 'sonar:sonar','-Dsonar.host.url=https://sonarcloud.io','-Dsonar.organization=gcpdevsecops','-Dsonar.projectKey=gcpdevsecopskey','-Dsonar.login=${_SONAR_TOKEN}']
+    args: ['verify', 'sonar:sonar','-Dsonar.host.url=https://sonarcloud.io','-Dsonar.organization=gcpdevsecops','-Dsonar.projectKey=gcpdevsecopskey','-Dsonar.login=c352ba4fdca1c188166043a19742daeac93ac6e1']
     id: SAST Scan using SonarCloud in GCP DevSecOps Pipeline
 
 #Run Software Composition Analysis (SCA security scan) using Snyk in GCP DevSecOps Pipeline
